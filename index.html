@@ -26,22 +26,22 @@
   </head>
   <body>
     <div class="container">
-        <div class="card" style="width: 60rem;">
+        <div class="card" style="width: 50rem;">
           <div class="card-body">
       <form id="search-city">
         <input id="search-city-input" type="text" placeholder="Enter a city" />
-        <button type="submit" class="search-button">Sear</button>
+        <button type="submit" class="search-button">Search</button>
         <button id="current-button" value="Current">Current</button>
       </form>
       <br />
-      <h2 id="city">Kielce</h1>
+      <h2> <span id="city">Kielce </span> Weather Forecast 🍀 </h2>
       <h3 id="date">Monday 12:00</h3>
       <h4 id="description">sunny</h4>
       <div class="row">
         <div class="col-6">
           <div class="weather-icon">
-            <span style="font-size: 5em;">☀️</span>
-            <div class="temp" id="temp-now">25</div>
+            <span style="font-size: 3em;">☀️</span>
+            <span class="temp" id="temp-now">25</span>
             <span class="temp-unit" id="temp-unit">
               <a href="#" id="celcius-link">°C</a> |
               <a href="#" id="farenheit-link">°F</a></span
@@ -53,41 +53,36 @@
           <div>Pressure: <span id="pressure"> 5 </span> hPa</div>
           <div>Humidity: <span id="humidity"> 80 </span> %</div>
           <div>Wind: <span id="wind">5 </span> km/h</div>
-          <div class="row">
-            <div class="col-xs-2 col-sm-4">Temperature</div>
-            <div class="col-xs-2 col-sm-4">Precipitation</div>
-            <div class="col-xs-2 col-sm-4">Wind</div>
-          </div>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <span style="font-size: 7em;">☁️</span>25° C<br />
+          <span style="font-size: 3em;">☁️</span>25° C<br />
           Tuesday
         </div>
 
         <div class="col">
-          <span style="font-size: 7em;">🌧️</span>18° C<br />
+          <span style="font-size: 3em;">🌧️</span>18° C<br />
           Wednesday
         </div>
 
         <div class="col">
-          <span style="font-size: 7em;">🌤️</span>21° C<br />
+          <span style="font-size: 3em;">🌤️</span>21° C<br />
           Thursday
         </div>
 
         <div class="col">
-          <span style="font-size: 7em;">🌤️</span>23° C<br />
+          <span style="font-size: 3em;">🌤️</span>23° C<br />
           Friday
         </div>
 
         <div class="col">
-          <span style="font-size: 7em;">☀️</span>30° C<br />
+          <span style="font-size: 3em;">☀️</span>30° C<br />
           Saturday
         </div>
       </div>
       <small>
-        <a href="" target="_blank">Open-source code </a> by Marta
+        <a href="https://github.com/Marta-Swier/vanilla-project-marta" target="_blank">Open-source code </a> by Marta
         Świerczyńska</small
       >
       <script src="src/index.js"></script>

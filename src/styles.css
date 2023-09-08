@@ -4,11 +4,14 @@
   margin: 5 auto;
   border-radius: 10px;
   display: block;
-  padding: 5 auto;
+  padding: 15 auto;
   background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   font-family: "Bacasime Antique", serif;
 }
-
+h3,
+h4 {
+  font-size: 20px;
+}
 .col-sm-4 {
   font-weight: serif;
   background-color: rgb(237, 229, 238);
@@ -25,7 +28,7 @@
   border: none;
   font-size: 15px;
   padding: 10px;
-  width: 300px;
+  width: 600px;
   text-align: right;
 }
 button {
@@ -44,7 +47,7 @@ button:hover {
   background-color: #ad6aff;
 }
 #temp-now {
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(165, 17, 233);
 }
 
