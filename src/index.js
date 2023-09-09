@@ -21,6 +21,10 @@ if (currentMinutes < 10) {
 let now = document.querySelector("h3");
 now.innerHTML = `${currentDay}, ${currentHour}:${currentMinutes}`;
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+}
+
 function changeCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-city-input");
@@ -63,6 +67,14 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
