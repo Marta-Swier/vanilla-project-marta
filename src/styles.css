@@ -1,16 +1,25 @@
 .card {
   position: relative;
   top: 90px;
-  margin: 5 auto;
+  margin: 0 auto;
+  border: 1px solid rgb(43, 18, 227);
   border-radius: 10px;
   display: block;
   padding: 15 auto;
   background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   font-family: "Bacasime Antique", serif;
 }
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+}
 h3,
 h4 {
   font-size: 20px;
+}
+#description {
+  font-size: 16px;
+  text-transform: capitalize;
 }
 .col-sm-4 {
   font-weight: serif;
@@ -28,7 +37,7 @@ h4 {
   border: none;
   font-size: 15px;
   padding: 10px;
-  width: 600px;
+  width: 430px;
   text-align: right;
 }
 button {
@@ -46,11 +55,22 @@ button {
 button:hover {
   background-color: #ad6aff;
 }
-#temp-now {
-  font-size: 30px;
-  color: rgb(165, 17, 233);
+#temp-unit1 {
+  position: relative;
+  font-size: 16px;
+  top: -25px;
+}
+#temp-unit {
+  position: relative;
+  font-size: 10px;
+  top: -6px;
 }
 
-small {
-  text-align: left;
+#temp-now {
+  font-size: 50px;
+}
+p {
+  text-align: right;
+  font-size: 12px;
+  margin: 0 auto;
 }
