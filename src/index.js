@@ -36,12 +36,13 @@ form.addEventListener("submit", changeCity);
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp-now");
-  temperatureElement.innerHTML = 66;
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 function convertToCelcius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp-now");
-  temperatureElement.innerHTML = 25;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let farenheitLink = document.querySelector("#farenheit-link");
@@ -67,12 +68,12 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celsiusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
 }
@@ -100,6 +101,8 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-city");
 searchForm.addEventListener("submit", handleSubmit);
