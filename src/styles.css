@@ -74,3 +74,12 @@ p {
   font-size: 12px;
   margin: 0 auto;
 }
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.temp-unit {
+  text-decoration: none;
+}
