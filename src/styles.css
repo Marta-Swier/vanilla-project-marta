@@ -58,7 +58,7 @@ button:hover {
 #temp-unit1 {
   position: relative;
   font-size: 16px;
-  top: -25px;
+  top: -10px;
 }
 #temp-unit {
   position: relative;
@@ -68,6 +68,8 @@ button:hover {
 
 #temp-now {
   font-size: 50px;
+  position: relative;
+  bottom: -12px;
 }
 p {
   text-align: right;
@@ -82,4 +84,15 @@ p {
 
 .temp-unit {
   text-decoration: none;
+}
+.real {
+  position: relative;
+  top: -20px;
+  left: 75px;
+  margin-left: 30px;
+  margin-right: 0px;
+  font-size: 14px;
+}
+#real-feel {
+  font-size: 20px;
 }
