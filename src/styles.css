@@ -68,6 +68,7 @@ button:hover {
   position: relative;
   font-size: 10px;
   top: -6px;
+  text-decoration: none;
 }
 
 #temp-now {
