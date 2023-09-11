@@ -33,27 +33,6 @@ function changeCity(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", changeCity);
 //Challenge 3s
-function convertToFarenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp-now");
-  celciusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-function convertToCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp-now");
-  celciusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", convertToFarenheit);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -100,14 +79,12 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "5293d8454b519c30f6f6331f38c85b4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
-  console.log(response);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp-now").innerHTML = Math.round(
     response.data.main.temp

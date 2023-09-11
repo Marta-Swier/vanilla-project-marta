@@ -14,12 +14,14 @@
   margin: 20px auto;
 }
 h2 {
-  font-size: 20px;
+  font-size: 30px;
+  opacity: 0.5;
 }
 
 h3,
 h4 {
   font-size: 16px;
+  opacity: 0.5;
 }
 #description {
   font-size: 16px;
@@ -28,12 +30,16 @@ h4 {
 .col-sm-4 {
   font-weight: serif;
   background-color: rgb(237, 229, 238);
+  opacity: 0.5;
 }
 .col-md-push-6 {
   text-align: left;
+  opacity: 0.5;
 }
-.col-sm-4 {
+.col-sm-4,
+#addition {
   text-align: left;
+  opacity: 0.5;
 }
 #search-city-input {
   border-radius: 10px;
@@ -59,11 +65,6 @@ button {
 button:hover {
   background-color: #ad6aff;
 }
-#temp-unit1 {
-  position: relative;
-  font-size: 16px;
-  top: -10px;
-}
 #temp-unit {
   position: relative;
   font-size: 10px;
@@ -86,17 +87,60 @@ p {
   cursor: default;
   text-decoration: none;
 }
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
 
-.temp-unit {
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
 .real {
   position: relative;
-  top: -20px;
-  left: 75px;
-  margin-left: 30px;
+  top: -10px;
+  left: 50px;
+  margin-left: 20px;
   margin-right: 0px;
   font-size: 14px;
+  opacity: 0.5;
 }
 #real-feel {
   font-size: 20px;
